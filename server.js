@@ -1,6 +1,9 @@
+import cors from "cors";
 import express from "express";
 
 const app = express();
+
+app.use(cors());
 
 app.get("/api/posts/:type", (req, res) => {
   const options = {
